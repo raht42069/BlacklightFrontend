@@ -1,0 +1,43 @@
+<form (keydown.enter)="save()">
+    <label>Enter CountryCode(Ex: ID, PT, CN)</label>
+    <input type="text" [(ngModel)]="CountryCode" [ngModelOptions]="{standalone: true}">
+    <button type="button" (click)="save()">Submit</button>
+  </form>
+<div class="container mt-5" *ngIf="showTable">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">UID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Score</th>
+          <th scope="col">CountryCode</th>
+          <th scope="col">TimeStamp</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let user of Users
+              | paginate
+              
+                : {
+                    itemsPerPage: 6,
+                    currentPage: pagination,
+                    totalItems: allUsers
+                  }
+          "
+        >
+          <td scope="row">{{ user.UID }}</td>
+          <td>{{ user.Name }}</td>
+          <td>{{ user.Score }}</td>
+          <td>{{ user.CountryCode }}</td>
+          <td>{{ user.TimeStamp }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="d-flex justify-content-center">
+      <pagination-controls
+        (pageChange)="renderPage($event)"
+      ></pagination-controls>
+    </div>
+  </div>

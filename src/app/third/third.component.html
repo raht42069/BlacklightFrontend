@@ -1,0 +1,10 @@
+<form (keydown.enter)="save()">
+    <label>Enter User ID (From 1 to 10000)</label>
+    <input type="text" [(ngModel)]="UID" [ngModelOptions]="{standalone: true}">
+    <button type="button" (click)="save()">Submit</button>
+  </form>
+  
+  <div *ngIf="responseNumber !== undefined">
+    <p>Rank of user : {{ responseNumber }}</p>
+  </div>
+  

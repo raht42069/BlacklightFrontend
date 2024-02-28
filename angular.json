@@ -34,10 +34,15 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.css"
+            "styles":[
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+             
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+             
+            ]
           },
           "configurations": {
             "production": {
@@ -93,13 +98,21 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.css"
+            "styles":[
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+             
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+             
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "27a40aaa-8897-4cf8-b1ed-46a582dce355"
   }
 }
