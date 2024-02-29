@@ -31,7 +31,7 @@ export class SecondComponent {
       'Content-Type': 'application/json', // Set your desired content type
     });
     this.http
-      .post<any>('https://blacklightvanshbackend.onrender.com/leaderboardByCountry', formData, {
+      .post<any>('https://backend-production-801b.up.railway.app/leaderboardByCountry', formData, {
         headers,
       })
       .subscribe((response) => {

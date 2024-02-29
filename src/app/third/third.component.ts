@@ -26,7 +26,7 @@ export class ThirdComponent {
       'Content-Type': 'application/json' // Set your desired content type
     })
     this.http
-      .post<any>('https://blacklightvanshbackend.onrender.com/rank', formData, {headers})
+      .post<any>('https://backend-production-801b.up.railway.app/rank', formData, {headers})
       .subscribe((response) => {
         // Assign the response number to the variable
         this.responseNumber = response[0].user_rank; // Assuming the number is the first item in the response array

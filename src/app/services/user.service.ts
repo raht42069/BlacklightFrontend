@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class UserService {
-  private url = 'https://blacklightvanshbackend.onrender.com/weeklyLeaderBoard';
+  private url = 'https://backend-production-801b.up.railway.app/weeklyLeaderBoard';
   constructor(private httpClient: HttpClient) {}
   getUsers(page: number) {
     return this.httpClient.get(this.url + '?page=' + page);
@@ -13,3 +13,5 @@ export class UserService {
   
  
 }
+
+//blacklightvanshbackend.onrender.com

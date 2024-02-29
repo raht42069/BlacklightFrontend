@@ -16,7 +16,7 @@ export class FirstComponent {
         this.userService.getUsers(this.pagination).subscribe((res: any) => {
           this.Users = res;
           this.allUsers = res.total;
-          console.log(res.total);
+          console.log(res);
         });
       }
       renderPage(event: number) {
